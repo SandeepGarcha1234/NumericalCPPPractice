@@ -126,5 +126,6 @@ std::cout<<I<<'\n';
 ```
 
 would display [1,0;0,1]. Note that this has the same format as the Matrix constructor that takes string as an input.
+The entries of a matrix can be accessed using round brackets. For instance to access the entry in the first row and in the first column of a matrix A, the following code would be used `double a = A(0,0);`. Please note the use of zero-based indexing.
 
 
