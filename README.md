@@ -117,7 +117,7 @@ inserts 0s into the first column of A. The other vesrion of the insertRows and i
 
 ### Overloaded Operators
 
-The operators `+` , `-`, and `*` all have been overloaded and are compatible with linear algebra. This means that `*` corresponds to the linear algebra version of multiplication and is not entry-wise multiplication. However, `*` can also be used to multiply a matrix by scalar.
+The operators `+` , `-`, and `*` all have been overloaded and are compatible with linear algebra. This means that `*` corresponds to the linear algebra version of multiplication and is not entry-wise multiplication. However, `*` can also be used to multiply a matrix by scalar. Please also not that, `*` is compatible with multiplication the standard C++ vector<double> type.
 
 Please note that `<<` also has been overloaded. Thus matrices can be sent to an output stream. For instance, the following code:
 
