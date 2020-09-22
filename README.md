@@ -178,8 +178,17 @@ Then we need to declare a variable J of type Jacobi as follows:
 
 `Jacobi J(A,b,45);`
 
-Unlike the GaussianElimination class, the Jacobi class constructor can take an extra argument. This argument is an integer that determines the number of iterations for the Jacobi method. The default is set to 40. It should be noted that this class does not directly check for convergence of this method. However, it does provide an indirect method to check convergence. This class has getnormOfError() method that returns the l2 norm of the difference of the last two vectors in the iteration. 
+Unlike the GaussianElimination class, the Jacobi class constructor can take an extra argument. This argument is an integer that determines the number of iterations for the Jacobi method. The default is set to 40. It should be noted that this class does not directly check for convergence of this method. However, it does provide an indirect method to check convergence. This class has getnormOfError() method that returns the l2 norm of the difference of the last two vectors in the iteration. Please note that this method can only be ran after the iteration has been run (ie. we have solved for x using the Jacobi iteration). From this code, one can determine the convergence of the method.
 
+Then in order to solve this equation, we must provide J with an initial guess. This is done as follows:
+
+```
+Matrix v0("[0;0;0;0;0]");
+Matrix x = J.solve(v0);
+```
+Here our initial guess is the zero "vector" (5x1 Matrix containing all zeros). Please note that the solve method takes an initial guess as an argument in the form of column matrix. In this example, we get that x = (-0.1,0.7,-0.6,0.7,-0.1). 
+
+Only after we have run the solve method, can we call the getnormOfError() method. Entering the code `double err = J.getnormOfError();` result in err holding the value 3.06929e-10.
 
 
 
