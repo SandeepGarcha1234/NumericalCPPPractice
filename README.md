@@ -32,12 +32,25 @@ A matrix can also be created from a standard C++ vector type. The following code
 
 ```
 std::vector<double> v({1,2});
-Matrix M(v,true) //will be a 2x1 matrix
-Matrix N(v,false) //will be a 1x2 matrix
+Matrix M(v,true); //will be a 2x1 matrix
+Matrix N(v,false); //will be a 1x2 matrix
 
 ```
 Please note that the second argument specifies if the matrix is in column vector form(true) or if the matrix is in row vector form(false). This argument is true by default.
 
+### Methods on Matrices
+
+The methods getRows() and getCols() return the number of rows and columns, respectively. For instance, consider the following code:
+
+```
+Matrix M("[1,2;3,4;5,6]");
+int m = M.getRows();
+int n = M.getCols();
+```
+
+Here m will take the value 3 and n will take the value 2.
+
+The PLUdecomposition returns the PLU decomposition for square invertible matrices(this will be expanded in the future). The result is returned in matrices that are passed by reference and they must be passed in the correct order (permutation matrix first, then the lower diagonal matrix, and finally the upper diagonal matrix.
 
 
 
