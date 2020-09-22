@@ -17,7 +17,7 @@ If the entries of the matrix are already known, then the matrix can be created f
 
 [ 1, 2
 
-  3, 4]
+   3, 4]
   
 use the following command:
 
