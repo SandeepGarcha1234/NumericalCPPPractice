@@ -192,3 +192,9 @@ Only after we have run the solve method, can we call the getnormOfError() method
 
 The other two methods, I have implemented so far, for solving linear equations are the Gauss Seidel method and SOR method. These methods can be accessed using the GaussSeidel class and the SOR class. Both of these classes function, in exactly the same way as the Jacobi class and have the same methods.
 
+## Statisics
+
+The statistical function in this project are very brief. I have only included the functions that I would need.
+
+The normcdf(x) function takes one argument(x) - a double  and returns the normal cumulative distribution function evaluated at x. For instance `double y = normcdf(1.95)` sets the value y to be 0.974412. The norminv(x) function takes one argument(x) - a double and returns the double corresponding to the xth percentile in the normal distribution. Please note that x must be between 0 and 1. For instance, `double y = norminv(0.975)` sets the value y to be 1.9591.
+
