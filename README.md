@@ -115,7 +115,16 @@ A.insertColumn(v,0);
 ```
 inserts 0s into the first column of A. The other vesrion of the insertRows and insertColumn methods work in the same except that the first argument they take is a Matrix. This matrix must be of size NX1 or 1XN and N must be of appropriate size.
 
+### Overloaded Operators
 
+The operators `+` , `-`, and `*` all have been overloaded and are compatible with linear algebra. This means that `*` corresponds to the linear algebra version of multiplication and is not entry-wise multiplication. Please note that `<<`
+also has been overloaded. Thus matrices can be sent to an output stream. For instance, the following code:
 
+```
+Matrix I= identity(2);
+std::cout<<I<<'\n';
+```
+
+would display [1,0;0,1]. Note that this has the same format as the Matrix constructor that takes string as an input.
 
 
