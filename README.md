@@ -25,3 +25,14 @@ use the following command:
 Matrix M("[1,2;3,4]";
 
 ```
+
+Note that each entry in a specific row is separated by a `,` and the end of a row is followed a `;` (expect the last row. The begininning of the matrix begins with a `[` and ends with a `]`. There are no spaces between any of the characters.
+
+
+
+
+
+
+
+
+
