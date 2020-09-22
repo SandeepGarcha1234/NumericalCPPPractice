@@ -62,7 +62,6 @@ public:
 };
 
 Matrix operator*(double a, const Matrix& mat);
-Matrix operator*(std::vector<double> vec, const Matrix& mat);
 std::ostream& operator<<(std::ostream& out, const Matrix& mat);
 Matrix identity(int n);
 
