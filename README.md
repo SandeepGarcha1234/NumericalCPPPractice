@@ -117,8 +117,9 @@ inserts 0s into the first column of A. The other vesrion of the insertRows and i
 
 ### Overloaded Operators
 
-The operators `+` , `-`, and `*` all have been overloaded and are compatible with linear algebra. This means that `*` corresponds to the linear algebra version of multiplication and is not entry-wise multiplication. Please note that `<<`
-also has been overloaded. Thus matrices can be sent to an output stream. For instance, the following code:
+The operators `+` , `-`, and `*` all have been overloaded and are compatible with linear algebra. This means that `*` corresponds to the linear algebra version of multiplication and is not entry-wise multiplication. However, `*` can also be used to multiply a matrix by scalar.
+
+Please note that `<<` also has been overloaded. Thus matrices can be sent to an output stream. For instance, the following code:
 
 ```
 Matrix I= identity(2);
@@ -126,6 +127,16 @@ std::cout<<I<<'\n';
 ```
 
 would display [1,0;0,1]. Note that this has the same format as the Matrix constructor that takes string as an input.
-The entries of a matrix can be accessed using round brackets. For instance to access the entry in the first row and in the first column of a matrix A, the following code would be used `double a = A(0,0);`. Please note the use of zero-based indexing.
+
+The entries of a matrix can be accessed using round brackets. For instance to access the entry in the first row and in the first column of a matrix A, the following code would be used `double a = A(0,0);`. Please note the use of zero-based indexing. This round brackets can also be used to change the values in the matrix. For instance, `A(0,0)=5` would change the value in the first row and first column of A to 5.
+
+Finally, matrices can be updated using the overloaded operators `+=`, `-=`, and `*=`. For instance, the following code,
+```
+Matrix I= identity(2);
+Matrix A("[1;2]");
+I*=A;
+```
+
+would change the value of I from a 2x2 identity matrix to 2x1 matrix containing the values 1 and 2.
 
 
