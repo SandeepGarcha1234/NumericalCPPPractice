@@ -74,6 +74,16 @@ A.PLUdecomposition(P,L,U);
 
 In this example, the permuation matrix would be stored in P; the lower diagonal matrix would be stored in L; And the upper diagonal matrix would be stored in U.
 
+In order to calculate the determinant and the trace of a matrix, the determinant() and trace() methods can be used. For the above example, the code would be as follows,
+
+```
+Matrix A("[1,2,-1,0;2,4,-2,-1;-3,-5,6,1;-1,2,8,-2]");
+double det = A.determinant();
+double tr = A.trace();
+
+```
+Since the determinant is calculated using the PLU decomposition, it currently only works invertible matrices(this will be corrected in the future).
+
 
 
 
