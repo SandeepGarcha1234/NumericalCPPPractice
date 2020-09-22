@@ -50,7 +50,7 @@ int n = M.getCols();
 
 Here m will take the value 3 and n will take the value 2.
 
-The PLUdecomposition returns the PLU decomposition for square invertible matrices(this will be expanded in the future). The result is returned in matrices that are passed by reference and they must be passed in the correct order (permutation matrix first, then the lower diagonal matrix, and finally the upper diagonal matrix. For example, suppose we have a matrix under the variable A as follows
+The PLUdecomposition returns the PLU decomposition for square invertible matrices(this will be expanded in the future). The result is returned in matrices that are passed by as arguments and they must be passed in the correct order (permutation matrix first, then the lower diagonal matrix, and finally the upper diagonal matrix. For example, suppose we have a matrix under the variable A as follows
 
 [1&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;-1&nbsp;&nbsp;&nbsp;&nbsp;0
 
@@ -60,9 +60,19 @@ The PLUdecomposition returns the PLU decomposition for square invertible matrice
 
 -1&nbsp;&nbsp;&nbsp;&nbsp;    2&nbsp;&nbsp;&nbsp;&nbsp;      8&nbsp;&nbsp;&nbsp;&nbsp;    -2]
 
+Here, the following code can be used to get the PLU decomposition.
 
+```
+Matrix A("[1,2,-1,0;2,4,-2,-1;-3,-5,6,1;-1,2,8,-2]");
+Matrix P(4,4);
+Matrix L(4,4);
+Matrix U(4,4);
+    
+A.PLUdecomposition(P,L,U);
 
+```
 
+In this example, the permuation matrix would be stored in P; the lower diagonal matrix would be stored in L; And the upper diagonal matrix would be stored in U.
 
 
 
