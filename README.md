@@ -148,4 +148,38 @@ I*=A;
 
 would change the value of I from a 2x2 identity matrix to 2x1 matrix containing the values 1 and 2.
 
+## Linear Systems
+
+In this project, there are four ways to solve a linear equation Ax=b for x where A is a matrix and b is column matrix(matrix of size nx1). Please note that at this stage, the linear solvers require square invertible matrices(this limitation will be eliminated in the future).
+
+The first of these methods uses the class GaussianElimination. As the name suggests, this class uses Gaussian Elimination to solve the linear equation. Let us consider the following example, by declaring and defining the Matrices A and b as follows:
+
+```
+Matrix A("[1,2,-1,0;2,4,-2,-1;-3,-5,6,1;-1,2,8,-2]");
+Matrix b("[1;-1;3;0]");
+```
+Please note that size b is 4x1 and not 1x4. Then we can set up the linear system to be solved by Gaussian Elimination by declaring G to be of type GaussianElimination as follows:
+
+`GaussianElimination G(A,b);`
+
+Then we can solve the system and store the result in the variable x as follows:
+
+`Matrix x=G.solve();`
+
+In this example, x end up being 4x1 matrix with entries (2,0,1,3). The GaussianElimination Class has two other methods, getMatrix() and getColumnVector(), both of which take no arguments and return Left hand side(A) and right hand side(b) of the linear system.
+
+The second of these methods is the Jacobi Iterative method. To use this method to solve a linear equation, we must use the Jacobi class. The idea is very similar to that of when we are using the Gaussian Elimination Class. For example, we start defining A and B as follows:
+
+```
+Matrix A("[4,1,0,1,0;1,4,1,0,1;0,1,4,1,0;1,0,1,4,1;0,1,0,1,4]");
+Matrix b("[1;2;-1;2;1]");
+```
+Then we need to declare a variable J of type Jacobi as follows:
+
+`Jacobi J(A,b,45);`
+
+Unlike the GaussianElimination class, the Jacobi class constructor can take an extra argument. This argument is an integer that determines the number of iterations for the Jacobi method. The default is set to 40. It should be noted that this class does not directly check for convergence of this method. However, it does provide an indirect method to check convergence. This class has getnormOfError() method that returns the l2 norm of the difference of the last two vectors in the iteration. 
+
+
+
 
