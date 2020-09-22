@@ -84,6 +84,14 @@ double tr = A.trace();
 ```
 Since the determinant is calculated using the PLU decomposition, it currently only works invertible matrices(this will be corrected in the future).
 
+To get the transpose of A, use the code `A.transpose();`
 
+The method diagonal() returns a matrix of the same size with the same entries on the diagonals and zeros on the off-diagonals. For example, consider the following code:
+
+```
+Matrix A("[1,2,-1,0;2,4,-2,-1;-3,-5,6,1;-1,2,8,-2]");
+Matrix D = A.diagonal();
+```
+Then the matrix D is 4x4 and has (1, 4, 6, -2) on the diagonals and zeros on the off-diagonals.
 
 
