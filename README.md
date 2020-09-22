@@ -190,5 +190,5 @@ Here our initial guess is the zero "vector" (5x1 Matrix containing all zeros). P
 
 Only after we have run the solve method, can we call the getnormOfError() method. Entering the code `double err = J.getnormOfError();` result in err holding the value 3.06929e-10.
 
-
+The other two methods, I have implemented so far, for solving linear equations are the Gauss Seidel method and SOR method. These methods can be accessed using the GaussSeidel class and the SOR class. Both of these classes function, in exactly the same way as the Jacobi class and have the same methods.
 
