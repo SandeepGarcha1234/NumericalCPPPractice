@@ -16,6 +16,7 @@ Matrix M(3,2);
 If the entries of the matrix are already known, then the matrix can be created from a string. For example, to create a matrix M with the following entries
 
 [ 1, 2
+
   3, 4]
   
 use the following command:
