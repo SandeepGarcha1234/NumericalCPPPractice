@@ -38,6 +38,12 @@ Matrix N(v,false); //will be a 1x2 matrix
 ```
 Please note that the second argument specifies if the matrix is in column vector form(true) or if the matrix is in row vector form(false). This argument is true by default.
 
+The identity matrix of size n can be created by using the identity function. For instance, the following code creates a 2x2 identity matrix and stores it in I.
+
+`Matrix I = identity(2);`
+
+Please note the identity function exists outside of the class.
+
 ### Methods on Matrices
 
 The methods getRows() and getCols() return the number of rows and columns, respectively. For instance, consider the following code:
