@@ -52,7 +52,7 @@ Here m will take the value 3 and n will take the value 2.
 
 The PLUdecomposition returns the PLU decomposition for square invertible matrices(this will be expanded in the future). The result is returned in matrices that are passed by reference and they must be passed in the correct order (permutation matrix first, then the lower diagonal matrix, and finally the upper diagonal matrix. For example, suppose we have a matrix under the variable A as follows
 
-[1*Tabspace* 2*Tabspace*-1*Tabspace*0
+[1     2     -1     0
 
  2    4     -2    -1
 
