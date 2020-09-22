@@ -43,7 +43,7 @@ public:
 class Jacobi : public Iterative{
 //solves a linear equation by using the Jacobi iteartion method
 //Although the class does not check for convergence of the method,
-//it does provide the l2 norm of the last two vectors in the sequence of the iteration
+//it does provide the l2 norm of the difference of the last two vectors in the sequence of the iteration
 //This result is stored in the normOfError variable
 
 private:
@@ -67,7 +67,7 @@ public:
 class GaussSeidel : public Iterative{
 //solves a linear equation by using the Gauss Seidel iteartion method
 //Although the class does not check for convergence of the method,
-//it does provide the l2 norm of the last two vectors in the sequence of the iteration
+//it does provide the l2 norm of the difference of the last two vectors in the sequence of the iteration
 //This result is stored in the normOfError variable
 
 private:
@@ -90,7 +90,7 @@ public:
 class SOR : public Iterative{
 //solves a linear equation by using the SOR iteartion method
 //Although the class does not check for convergence of the method,
-//it does provide the l2 norm of the last two vectors in the sequence of the iteration
+//it does provide the l2 norm of the difference of the last two vectors in the sequence of the iteration
 //This result is stored in the normOfError variable
 
 private:
