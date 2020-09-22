@@ -94,4 +94,9 @@ Matrix D = A.diagonal();
 ```
 Then the matrix D is 4x4 and has (1, 4, 6, -2) on the diagonals and zeros on the off-diagonals.
 
+The lower method returns a matrix of the same size, with the same entries on the lower diagonal(including the diagonal) and with zeros on the off-diagonal. The call for the method would be as follows:
 
+```
+Matrix A("[1,2,-1,0;2,4,-2,-1;-3,-5,6,1;-1,2,8,-2]");
+Matrix L = A.lower();
+```
