@@ -194,9 +194,12 @@ The other two methods, I have implemented so far, for solving linear equations a
 
 ## Statistics
 
-The statistical function in this project are very brief. I have only included the functions that I would need.
+The statistical functions in this project are very brief. I have only included the functions that I would need.
 
 The normcdf(x) function takes one argument(x) - a double  and returns the normal cumulative distribution function evaluated at x. For instance `double y = normcdf(1.95)` sets the value y to be 0.974412. The norminv(x) function takes one argument(x) - a double and returns the double corresponding to the xth percentile in the normal distribution. Please note that x must be between 0 and 1. For instance, `double y = norminv(0.975)` sets the value y to be 1.9591.
 
 The randuniform function takes 1 argument (n) - an integer, and return a nx1 Matrix with the entries being "random" samples from [0,1]. The boxMuller() function without any arguments returns a random sample from the standard normal distribution. The boxMuller(int n) function that takes one argument (n) - an integer, returns a nx1 Matrix with the entries being random samples from the standard normal.
+
+## Black Scholes Model
+
 
