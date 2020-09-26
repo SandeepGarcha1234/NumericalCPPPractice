@@ -4,7 +4,7 @@
 #include "matrix.hpp"
 
 class BlackScholesModel{
-//holds parameters relevant the Black Scholes Model for a particular stock 
+//holds parameters relevant to the Black Scholes Model for a particular stock 
 
 public:	
 	double stockPrice;
