@@ -202,4 +202,18 @@ The randuniform function takes 1 argument (n) - an integer, and return a nx1 Mat
 
 ## Black Scholes Model
 
+Data for a stock, modelled by the Black Scholes Model, can be held in the BlackScholesModel class. For instance, if we had a stock XYZ currently priced $50, with drift 0.2, volatility 0.4, and the continuous risk free rate of 0.1, then we could store this information as follows
+
+```
+BlackScholesModel XYZ;
+XYZ.stockPrice = 50;
+XYZ.date = 0; //we set this equal to zero, since we have the current stock price
+XYZ.drift = 0.2;
+XYZ.riskFreeRate = 0.1;
+XYZ.volatility = 0.4;
+```
+
+
+
+
 
