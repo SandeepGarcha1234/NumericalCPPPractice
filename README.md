@@ -213,7 +213,6 @@ XYZ.riskFreeRate = 0.1;
 XYZ.volatility = 0.4;
 ```
 
-From this instance, we can generate 
 
 
 
